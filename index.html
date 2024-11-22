@@ -177,41 +177,38 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Paper video. -->
+    <!-- Paper video comparison -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-full">
         <h2 class="title is-2">Qualitative Video-to-Audio Generation</h2>
         <hr>
-        <video id="sota_1" height="100%">
-          <source src="assets/videos/sota/1.mp4"
-                  type="video/mp4">
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <!-- SOTA Column -->
+      <div class="column is-half">
+        <div class="title is-3">State-of-the-Art (SOTA)</div>
+        <video id="sota_1" controls style="width: 100%; margin-bottom: 20px;">
+          <source src="assets/videos/sota/1.mp4" type="video/webm">
+          Your browser does not support the video tag.
         </video>
-        <video id="ours_1" height="100%">
-          <source src="assets/videos/ours/1.mp4"
-                  type="video/mp4">
+        <video id="sota_2" controls style="width: 100%;">
+          <source src="assets/videos/sota/2.mp4" type="video/webm">
+          Your browser does not support the video tag.
         </video>
+      </div>
 
-        <video id="sota_2" height="100%">
-          <source src="assets/videos/sota/2.mp4"
-                    type="video/mp4">
+      <!-- Ours Column -->
+      <div class="column is-half">
+        <div class="title is-3">Foley-Flow (Ours)</div>
+        <video id="ours_1" controls style="width: 100%; margin-bottom: 20px;">
+          <source src="assets/videos/ours/1.mp4" type="video/webm">
+          Your browser does not support the video tag.
         </video>
-        <video id="ours_2" height="100%">
-          <source src="assets/videos/ours/2.mp4"
-                  type="video/mp4">
+        <video id="ours_2" controls style="width: 100%;">
+          <source src="assets/videos/ours/2.mp4" type="video/webm">
+          Your browser does not support the video tag.
         </video>
-        <!-- <div class="column has-text-centered">
-          <img src="assets/vis_one.png" width="960" height="640"/>
-          <p>Qualitative visualizations of audio-visual embodied navigation on Case I. FAVEN achieves much fast results with a decent search path.</p>
-        </div> -->
-        <!-- <div class="column has-text-centered">
-          <img src="assets/vis_two.png" width="960" height="640"/>
-          <p>Qualitative visualizations of audio-visual embodied navigation on Case II. FAVEN achieves much fast results with a decent search path. </p>
-        </div> -->
-        <!-- <div class="column has-text-centered">
-          <img src="assets/vis_three.png" width="960" height="640"/>
-          <p>Qualitative visualizations of audio-visual embodied navigation on Case III. FAVEN achieves much fast results with a decent search path. </p>
-        </div> -->
-
       </div>
     </div>
   </div>
