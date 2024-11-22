@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Foley-Flow: Coordinated Video-to-Audio Generation with Masked Audio-Visual Alignment and Dynamic Conditional Flows.">
+  <meta name="keywords" content="3D-Navigation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Foley-Flow: Coordinated Video-to-Audio Generation with Masked Audio-Visual Alignment and Dynamic Conditional Flows</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Foley-Flow: Coordinated Video-to-Audio Generation with Masked Audio-Visual Alignment and Dynamic Conditional Flows</h1>
+          <div class="is-size-5 publication-authors">
+            Anonymous CVPR Submission
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            ID: 10802
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <video id="teaser" autoplay muted playsinline loop height="100%">
+        <source src="assets/videos/ours/1.mp4"
+                type="video/mp4">
+      </video> -->
+      <h2 class="subtitle has-text-centered">
+        We propose Foley-Flow, a novel architecture to first align unimodal AV encoders via masked modeling training, 
+        where the masked audio segments are recovered under the guidance of the corresponding video segments and dynamic conditional flow for the final audio generation.
+      </h2>
+    </div>
+    <div class="hero-body has-text-centered">
+      <img src="assets/framework.png" width="480" height="360"/>
+      <h2 class="subtitle has-text-centered">
+        Our Foley-Flow aligns unimodal AV encoders via masked modeling training, where the masked audio segments are recovered under the guidance of the corresponding video segments. 
+        Moreover, we develop a dynamic conditional flow for the final audio generation by utilizing temporally varying video features as the dynamic condition to guide corresponding audio segment generations. 
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <hr>
+        <div class="content has-text-justified">
+          <p>
+            Coordinated audio generation based on video inputs typically requires a strict audio-visual (AV) alignment, where both semantics and rhythmics of the generated audio segments shall correspond to those in the video frames. 
+            Previous studies leverage a two-stage design where the AV encoders are firstly aligned via contrastive learning, then the encoded video representations guide the audio generation process. 
+            We observe that both contrastive learning and global video guidance are effective in aligning overall AV semantics while limiting temporally rhythmic synchronization. 
+            In this work, we propose Foley-Flow to first align unimodal AV encoders via masked modeling training, where the masked audio segments are recovered under the guidance of the corresponding video segments. 
+            After training, the AV encoders which are separately pretrained using only unimodal data are aligned with semantic and rhythmic consistency. 
+            Then, we develop a dynamic conditional flow for the final audio generation. 
+            Built upon the efficient velocity flow generation framework, our dynamic conditional flow utilizes temporally varying video features as the dynamic condition to guide corresponding audio segment generations. 
+            To this end, we extract coherent semantic and rhythmic representations during masked AV alignment, and use this representation of video segments to guide audio generation temporally. 
+            Our audio results are evaluated on the standard benchmarks and largely surpass existing results under several metrics. 
+            The superior performance indicates that Foley-Flow is effective in generating coordinated audios that are both semantically and rhythmically coherent to various video sequences.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiments</h2>
+        <hr>
+        <!-- <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div> -->
+        <div class="column has-text-centered">
+          <img src="assets/title_img.png" width="480" height="360"/>
+          <p>Comparison with state-of-the-art approaches on semantical (Align Acc) and rhythmical (KLD, FAD) metrics. </p>
+          <p>Our method achieves the best results compared to previous methods.
+          </p>
+        </div>
+        <hr>
+        <div class="column has-text-centered">
+          <img src="assets/table_sota.png" width="360" height="240"/>
+          <p>Comparison results on VGGSound test set for video-to- audio generation. Our Foley-Flow achieves the best performance. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="hero-body">
+        <h2 class="title is-3">Experimental Analyses</h2>
+        <hr>
+        <div class="column has-text-centered">
+          <img src="assets/table_ablation.png" width="360" height="240"/>
+          <p>Ablation studies on Video-Audio Masking Alignment (VAMA) and Generalized Video-Audio Flow (GVAF) for video-to-audio generation. </p>
+        </div>
+        <hr>
+        <div class="column has-text-centered">
+          <img src="assets/table_encoder.png" width="360" height="240"/>
+          <p>Ablation studies on video-audio encoders for video-to- audio generation. </p>
+        </div>
+        <hr>
+        <div class="column has-text-centered">
+          <img src="assets/table_flow.png" width="360" height="240"/>
+          <p>Ablation studies on Dynamic Conditional Flow (DCF) and Generalized Dynamic Conditional Flow (GDCF) for video-to-audio generation. </p>
+        </div>
+        <hr>
+        <div class="column has-text-centered">
+          <img src="assets/table_ratio.png" width="360" height="240"/>
+          <p>Ablation studies on masking ratio for video-to-audio generation. </p>
+        </div>
+        <hr>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Qualitative Video-to-Audio Generation</h2>
+        <hr>
+        <video id="sota_1" height="100%">
+          <source src="assets/videos/sota/1.mp4"
+                  type="video/mp4">
+        </video>
+        <video id="ours_1" height="100%">
+          <source src="assets/videos/ours/1.mp4"
+                  type="video/mp4">
+        </video>
+
+        <video id="sota_2" height="100%">
+          <source src="assets/videos/sota/2.mp4"
+                    type="video/mp4">
+        </video>
+        <video id="ours_2" height="100%">
+          <source src="assets/videos/ours/2.mp4"
+                  type="video/mp4">
+        </video>
+        <!-- <div class="column has-text-centered">
+          <img src="assets/vis_one.png" width="960" height="640"/>
+          <p>Qualitative visualizations of audio-visual embodied navigation on Case I. FAVEN achieves much fast results with a decent search path.</p>
+        </div> -->
+        <!-- <div class="column has-text-centered">
+          <img src="assets/vis_two.png" width="960" height="640"/>
+          <p>Qualitative visualizations of audio-visual embodied navigation on Case II. FAVEN achieves much fast results with a decent search path. </p>
+        </div> -->
+        <!-- <div class="column has-text-centered">
+          <img src="assets/vis_three.png" width="960" height="640"/>
+          <p>Qualitative visualizations of audio-visual embodied navigation on Case III. FAVEN achieves much fast results with a decent search path. </p>
+        </div> -->
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            Thanks for reading our work!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
